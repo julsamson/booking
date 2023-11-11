@@ -16,7 +16,7 @@ export default function Home() {
     //   </div>
     // </div>
 
-    <div className='flex justify-center items-center h-screen bg-gray-700'>
+    <div className='flex justify-center items-center h-screen'>
       <div>
         <span className="relative flex h-64 w-64 justify-center items-center">
           <span className="animate-ping absolute inline-flex h-40 w-40 rounded-3xl bg-gray-400 opacity-100"></span>
