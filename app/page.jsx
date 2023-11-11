@@ -28,7 +28,7 @@ export default function Home() {
                   <span></span>
                   <span></span>
                   <span></span>
-                  Owner
+                  Admin
                 </Link>
               </h2>
               <h2 className='p-2 rounded-lg cursor-pointer'>
