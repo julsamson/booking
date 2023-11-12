@@ -5,31 +5,23 @@ import { useRouter } from 'next/navigation'
 import { Axios } from 'axios'
 
 
+
 export default function LoginPage() {
 
   const [user, setUser] = React.useState({
     email: "",
     password: "",
-    username: "",
   })
 
-  const onSignup = async () => {
+  const onLogin = async () => {
 
   }
 
   return (
-    <div className='flex flex-col items-center justify-center min-h-screen py-2'>
-      <h1>Signup</h1>
+
+    <div className='flex flex-col items-center justify-center min-h-screen py-2 text-white'>
+      <h1>Login</h1>
       <hr />
-      <label htmlFor="username">Username:</label>
-      <input
-        className='p-2 rounded-lg border border-gray-300 mb-4 focus:outline-none focus:border-gray-600'
-        type="text"
-        id='username'
-        value={user.username}
-        onChange={(e) => setUser({ ...user, username: e.target.value })}
-        placeholder='UserName'
-      />
       <label htmlFor="email">Email:</label>
       <input
         className='p-2 rounded-lg border border-gray-300 mb-4 focus:outline-none focus:border-gray-600'
@@ -39,6 +31,7 @@ export default function LoginPage() {
         onChange={(e) => setUser({ ...user, email: e.target.value })}
         placeholder='Email'
       />
+
       <label htmlFor="password">Password:</label>
       <input
         className='p-2 rounded-lg border border-gray-300 mb-4 focus:outline-none focus:border-gray-600'
@@ -48,20 +41,11 @@ export default function LoginPage() {
         onChange={(e) => setUser({ ...user, password: e.target.value })}
         placeholder='Password'
       />
-      <label htmlFor="room">Room:</label>
-      <input
-        className='p-2 rounded-lg border border-gray-300 mb-4 focus:outline-none focus:border-gray-600'
-        type="number"
-        id='room'
-        value={user.room}
-        onChange={(e) => setUser({ ...user, room: e.target.value })}
-        placeholder='Room'
-      />
 
-      <button onClick={onSignup} className='p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600'>
-        Signup here
+      <button onClick={onLogin} className='p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600'>
+        Login
       </button>
-      <Link href="/login">visit login page</Link>
+      <Link href="/signup">visit Signup page</Link>
 
     </div>
   )
