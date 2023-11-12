@@ -29,7 +29,9 @@ export default function SignupPage() {
         value={user.username}
         onChange={(e) => setUser({ ...user, username: e.target.value })}
         placeholder='UserName'
+        required
       />
+
       <label htmlFor="email">Email:</label>
       <input
         className='p-2 rounded-lg border border-gray-300 mb-4 focus:outline-none focus:border-gray-600'
@@ -38,7 +40,9 @@ export default function SignupPage() {
         value={user.email}
         onChange={(e) => setUser({ ...user, email: e.target.value })}
         placeholder='Email'
+        required
       />
+
       <label htmlFor="password">Password:</label>
       <input
         className='p-2 rounded-lg border border-gray-300 mb-4 focus:outline-none focus:border-gray-600'
@@ -47,7 +51,9 @@ export default function SignupPage() {
         value={user.password}
         onChange={(e) => setUser({ ...user, password: e.target.value })}
         placeholder='Password'
+        required
       />
+      
       <label htmlFor="room">Room:</label>
       <input
         className='p-2 rounded-lg border border-gray-300 mb-4 focus:outline-none focus:border-gray-600'
@@ -56,6 +62,7 @@ export default function SignupPage() {
         value={user.room}
         onChange={(e) => setUser({ ...user, room: e.target.value })}
         placeholder='Room'
+        required
       />
 
       <button onClick={onSignup} className='p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600'>
