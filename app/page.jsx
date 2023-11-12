@@ -22,7 +22,7 @@ export default function Home() {
           <span className="relative inline-flex rounded-md h-64 w-64 bg-sky-500 bg-[url('/image/julian.jpg')] bg-center bg-cover text-red-500 items-center justify-center">
             <span className='block space-y-10 '>
               <h2 className='p-2 rounded-lg cursor-pointer'>
-                <Link href="/" className="animated-button1 rounded-lg">
+                <Link href="/login" className="animated-button1 rounded-lg">
                   <span></span>
                   <span></span>
                   <span></span>
