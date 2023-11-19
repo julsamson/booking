@@ -1,0 +1,36 @@
+//schema.prisma
+
+//Define the database connection
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "./generated/client"
+}
+
+
+
+// Set up your database connection. Update the URL with your actual database connection details.
+datasource db {
+  provider = "postgresql"
+  url = env("POSTGRES_PRISMA_URL") // uses connection pooling
+  directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+}
+
+
+
+// Define the structure of your database
+model Owner {
+  id         Int      @id @default(autoincrement())
+  name       String
+  email      String   @unique
+  roomNumber String
+  password   String   @unique
+  playstations Playstation[]
+}
+
+model Playstation {
+  id       Int    @id @default(autoincrement())
+  ownerId  Int
+  name     String
+  owner    Owner  @relation(fields: [ownerId], references: [id])
+}
