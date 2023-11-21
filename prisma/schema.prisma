@@ -4,7 +4,6 @@
 
 generator client {
   provider = "prisma-client-js"
-  output   = "./generated/client"
 }
 
 
@@ -21,11 +20,13 @@ datasource db {
 // Define the structure of your database
 model Owner {
   id         Int      @id @default(autoincrement())
-  name       String
+  username       String
   email      String   @unique
   roomNumber String
   password   String   @unique
   playstations Playstation[]
+  createdAt  DateTime @default(now())
+  
 }
 
 model Playstation {

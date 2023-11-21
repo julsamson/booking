@@ -11,6 +11,7 @@ export default function SignupPage() {
     email: "",
     password: "",
     username: "",
+    room:""
   })
 
   const onSignup = async () => {
